@@ -1,0 +1,29 @@
+{
+  "name": "avalon",
+  "version": "1.0.0",
+  "description": "A website to help knowledge workers be productive",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinhale/Avalon.git"
+  },
+  "keywords": [
+    "pomodoro",
+    "GTD",
+    "SRS",
+    "spaced",
+    "repetition",
+    "software",
+    "NodeJS",
+    "JavaScript"
+  ],
+  "author": "Justin L. Hale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinhale/Avalon/issues"
+  },
+  "homepage": "https://github.com/jinhale/Avalon#readme"
+}
