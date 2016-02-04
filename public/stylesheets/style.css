@@ -5,4 +5,10 @@ body {
 a {
   color: #00B7FF; }
 
+#navbar .form-group {
+  margin-left: 5px; }
+
+#navbar button[type="success"] {
+  margin-left: 5px; }
+
 /*# sourceMappingURL=style.css.map */
