@@ -26,7 +26,11 @@ app.use(require('node-sass-middleware')({
   indentedSyntax: true,
   sourceMap: true
 }));
+
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/angular', express.static(path.join(__dirname, 'node_modules/angular')));
+app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap')));
+app.use('/jquery', express.static(path.join(__dirname, 'node_modules/jquery')));
 
 app.use('/', routes);
 app.use('/users', users);
