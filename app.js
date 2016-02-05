@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var timer = require('./routes/timer');
 
 var app = express();
 
@@ -31,9 +32,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/angular', express.static(path.join(__dirname, 'node_modules/angular')));
 app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap')));
 app.use('/jquery', express.static(path.join(__dirname, 'node_modules/jquery')));
+app.use('/moment', express.static(path.join(__dirname, 'node_modules/moment')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/timer', timer);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
