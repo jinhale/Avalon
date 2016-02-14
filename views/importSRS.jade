@@ -1,0 +1,33 @@
+extends layout
+
+block head
+    script(type='text/javascript', src='javascripts/deckImporter.js')
+
+block content
+    #tasks.container(ng-app='deckImporterApp')
+        .row
+            .col-md-12
+                h1 Choose Your Deck
+                .container
+                    .row(ng-controller='deckImportController as deckImporter')
+                        .col-md-4
+                            h2 Anki
+                            label(for='ankiFileInput') Pickv  2.0 or below
+                            .input-groups
+                                input.form-control#ankiFileInput(type='file')
+                        .col-md-4
+                            h2 Mnemosyne
+                            label(for='mnemosyneFileInput') Pick v 2.0 or below
+                            .input-group
+                                input.form-control#mnemosyneFileInput(type='file')
+                        .col-md-3
+                            h2 Supermemo
+                            label(for='supermemoFileInput') Pick v 2015 or below
+                            .input-group
+                                input.form-control#supermemoFileInput(type='file')
+        .row
+            .col-md-12
+                h1 Paste, Edit, and Save                
+                textarea#deckEditor
+                .input-group
+                    input(type='submit' text='Save')

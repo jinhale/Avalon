@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var timer = require('./routes/timer');
+var importSRS = require('./routes/importSRS');
 
 var app = express();
 
@@ -37,6 +38,7 @@ app.use('/moment', express.static(path.join(__dirname, 'node_modules/moment')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/timer', timer);
+app.use('/importSRS', importSRS);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
