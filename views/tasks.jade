@@ -1,0 +1,22 @@
+extends layout
+
+block head
+    script(type='text/javascript', src='javascripts/tasks.js')
+    script(type='text/javascript', src='/moment/moment.js')
+
+block content
+    #tasks.container(ng-app='taskApp')
+        .row(ng-controller='taskController as task ')
+            .col-md-4 
+                h1 To Do List
+                ul
+                    li
+            .col-md-4
+                h1 In Progress
+                button.form-control {{task.pomodoroValueFormatted}}
+                ul
+                    li
+            .col-md-4
+                h1 Completed
+                ul
+                    li
