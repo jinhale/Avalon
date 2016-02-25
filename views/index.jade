@@ -4,38 +4,37 @@ append scripts
     script(src='/javascripts/index.js')
 
 block content
-  nav.navbar.navbar-inverse.navbar-fixed-top
+    nav.navbar.navbar-inverse.navbar-fixed-top
+        .container
+            .navbar-header
+                button.navbar-toggle.collapsed(data-target='#navbar', aria-expanded='false', aria-controls='navbar', data-toggle='collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+                a.navbar-brand(href='#') Avalon
+            #navbar.navbar-collapse.collapse.in(aria-expanded='true')
+                form.navbar-form.navbar-right
+                    .form-group 
+                        input.form-control(type='text', placeholder='email')         
+                    .form-group 
+                        input.form-control(type='password', placeholder='password')
+                    button.btn.btn-success(type='success') Sign In
     .container
-      .navbar-header
-        button.navbar-toggle.collapsed(data-target='#navbar', aria-expanded='false', aria-controls='navbar', data-toggle='collapse')
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        a.navbar-brand(href='#') Avalon
-      #navbar.navbar-collapse.collapse.in(aria-expanded='true')
-        form.navbar-form.navbar-right
-          .form-group 
-            input.form-control(type='text', placeholder='email')         
-          .form-group 
-            input.form-control(type='password', placeholder='password')
-          button.btn.btn-success(type='success') Sign In
-  .jumbotron
-    .container
-      h1= title
-      p Welcome to #{title}. Lots of sites and apps offer a Pomodoro timer. Some even add a bit of the GTD (Getting Things Done) way to time management. Here is a place to nuture your mind using all the tools available. 
-  .container
-    .row
-      .col-md-4
-        h2 Pomodoro Integration
-        p Knowledge work is demanding, and solving complex problems all day will actually make productivity suffer, but there are ways to maximize mental concentration over time. 
-        a.btn.btn-primary.btn-lg(href='/timer') Learn More
-      .col-md-4
-          h2 GTD - Getting Thing Done
-          p David Allen gave us some insights that can help us keep our mind focused on what matters at the moment. 
-          a.btn.btn-primary.btn-lg Learn More
-      .col-md-4
-          h2 SRS - Spaced Repetition Software
-          p One of psychology's best kept secrets, SRS is a way to overcome much of the innefiency in learning. All people forget and learn in some predictable ways, SRS puts the computer to task, scheduling well structed questions or tasks for review at the ideal moment. 
-          a.btn.btn-primary.btn-lg Learn More 
-    
+        .jumbotron
+            h1= title
+            p Welcome to #{title}. Lots of sites and apps offer a Pomodoro timer. Some even add a bit of the GTD (Getting Things Done) way to time management. Here is a place to nuture your mind using all the tools available. 
+            .container(ng-controller="indexController")
+                .row
+                    .col-md-4
+                        h2 Pomodoro Integration
+                        p Knowledge work is demanding, and solving complex problems all day will actually make productivity suffer, but there are ways to maximize mental concentration over time. 
+                        a.btn.btn-primary.btn-lg(ng-href='/pomodoro') Learn More
+                    .col-md-4
+                        h2 GTD - Getting Thing Done
+                        p David Allen gave us some insights that can help us keep our mind focused on what matters at the moment. 
+                        a.btn.btn-primary.btn-lg(ng-href='/gtd') Learn More
+                    .col-md-4
+                        h2 SRS - Spaced Repetition Software
+                        p One of psychology's best kept secrets, SRS is a way to overcome much of the innefiency in learning. All people forget and learn in some predictable ways, SRS puts the computer to task, scheduling well structed questions or tasks for review at the ideal moment. 
+                        a.btn.btn-primary.btn-lg(ng-href='/srs') Learn More 
