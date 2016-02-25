@@ -11,4 +11,13 @@ a {
 #navbar button[type="success"] {
   margin-left: 5px; }
 
+#tasks li {
+  list-style: none; }
+
+#deckEditor {
+  min-height: 500px;
+  width: 100%;
+  background-color: #ffffde;
+  font-family: currier, monospace; }
+
 /*# sourceMappingURL=style.css.map */
